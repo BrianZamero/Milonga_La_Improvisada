@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Dancer - La Improvisada Milonguita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="../styles/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark"
+        style="background: linear-gradient(90deg, #030637, #3C0753, #720455, #910A67);">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../media/logo_improvisada.jpeg" alt="Logo"
+                    style="width:60px; height:60px; border-radius:50%; margin-right:10px;">
+                <span class="fw-bold">La Improvisada</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./milongas.html">Milongas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./clases.html">Clases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./taxi-dancer.html">Taxi Dancer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Catálogo Taxi Dancer</h1>
+        <h2>Conoce a nuestros bailarines disponibles</h2>
+    </section>
+
+    <section class="filtro">
+        <div class="container">
+            <h3>Filtrar por región</h3>
+            <select id="filtroRegion" class="filtro-select" onchange="filtrarBailarines()">
+                <option value="todas">Todas las regiones</option>
+                <option value="internacional">Internacional</option>
+                <option value="santa-fe">Santa Fe</option>
+                <option value="entre-rios">Entre Ríos</option>
+                <option value="buenos-aires">Buenos Aires</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="mendoza">Mendoza</option>
+                <option value="tucuman">Tucumán</option>
+                <option value="salta">Salta</option>
+                <option value="corrientes">Corrientes</option>
+                <option value="misiones">Misiones</option>
+                <option value="chaco">Chaco</option>
+                <option value="formosa">Formosa</option>
+                <option value="jujuy">Jujuy</option>
+                <option value="santiago-del-estero">Santiago del Estero</option>
+                <option value="catamarca">Catamarca</option>
+                <option value="la-rioja">La Rioja</option>
+                <option value="san-juan">San Juan</option>
+                <option value="san-luis">San Luis</option>
+                <option value="la-pampa">La Pampa</option>
+                <option value="neuquen">Neuquén</option>
+                <option value="rio-negro">Río Negro</option>
+                <option value="chubut">Chubut</option>
+                <option value="santa-cruz">Santa Cruz</option>
+                <option value="tierra-del-fuego">Tierra del Fuego</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="catalogo-bailarines">
+        <div class="container">
+            <div class="grid-bailarines">
+
+                <div class="bailarin" data-region="entre-rios">
+                    <div id="carouselBrian" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../media/brian.jpg" class="d-block w-100" alt="Brian Zamero - Foto 1"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../media/briancollgae.jpg" class="d-block w-100" alt="Brian Zamero - Foto 2"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../media/brian-erguido.jpg" class="d-block w-100" alt="Brian Zamero - Foto 3"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBrian"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBrian"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <h4>Brian Zamero ★★★★★</h4>
+                    <p>Taxidancer Entrerriano con 3 años de experiencia</p>
+                    <div class="precio">$50 USD la hora</div>
+                    <div class="comentarios">
+                        <p><em>"Excelente conexión y técnica. Muy profesional." - Clientes satisfechos 4</em></p>
+                    </div>
+                </div>
+
+                <div class="bailarin" data-region="santa-fe">
+                    <div id="carouselLaura" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../media/laurapose.jpg" class="d-block w-100" alt="Laura-Lare - Foto 1"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../media/lauraybrianfoto.jpg" class="d-block w-100" alt="Laura-Lare - Foto 2"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../media/lauraycosme.jpg" class="d-block w-100" alt="Laura-Lare - Foto 3"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLaura"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselLaura"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <h4>Laura Lare ★★★★★</h4>
+                    <p>Taxidancer Entrerriana con 2 años de experiencia</p>
+                    <div class="precio">$50 USD la hora</div>
+                    <div class="comentarios">
+                        <p><em>"Espectacular, un amor de persona y bailarina." - Clientes satisfechos 10</em></p>
+                    </div>
+                </div>
+
+
+                <div class="bailarin" data-region="entre-rios">
+                    <div id="carouselAlexis" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../media/Alexisfoto1.PNG" class="d-block w-100" alt="Alexis Kloster - Foto 1"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../media/Alexisfoto2.PNG" class="d-block w-100" alt="Alexis Kloster - Foto 2"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../media/Alexisfoto3.PNG" class="d-block w-100" alt="Alexis Kloster - Foto 3"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlexis"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAlexis"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <h4>Alexis Kloster ★★★★★</h4>
+                    <p>Profesor y Taxidancer Entrerriano con 6 años de experiencia</p>
+                    <div class="precio">$50 USD la hora</div>
+                    <div class="comentarios">
+                        <p><em>"Excelente técnica y Estilo unico. Muy Profesional." - Clientes satisfechos 15</em></p>
+                    </div>
+                </div>
+
+                <div class="bailarin" data-region="entre-rios">
+                    <div id="carouselEmanuel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../media/Emanuelfoto1.PNG" class="d-block w-100"
+                                    alt="Emanuel Jauregui - Foto 1" style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../media/Emanuelfoto2.PNG" class="d-block w-100"
+                                    alt="Emanuel Jauregui - Foto 2" style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../media/Emanuelfoto3.PNG" class="d-block w-100"
+                                    alt="Emanuel Jauregui - Foto 3" style="height: 300px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEmanuel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselEmanuel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <h4>Emanuel Jauregui ★★★★★</h4>
+                    <p>Taxidancer y profesor Entrerriano con 18 años de experiencia</p>
+                    <div class="precio">$50 USD la hora</div>
+                    <div class="comentarios">
+                        <p><em>"Excelente conexión y técnica Un mini Naveira un capo. Muy amable." - Clientes
+                                satisfechos 55</em></p>
+                    </div>
+                </div>
+
+                <div class="bailarin" data-region="entre-rios">
+                    <div id="carouselLeandro" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../media/foto-1verdad.PNG" class="d-block w-100" alt="Leandro Welsch - Foto 1"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../media/foto-2.PNG" class="d-block w-100" alt="Leandro Welsch - Foto 2"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../media/Leandrofoto1.PNG" class="d-block w-100" alt="Leandro Welsch - Foto 3"
+                                    style="height: 300px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLeandro"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselLeandro"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <h4>Leandro Welsch ★★★★★</h4>
+                    <p>Taxidancer Entrerriano con 20 años de experiencia</p>
+                    <div class="precio">$50 USD la hora</div>
+                    <div class="comentarios">
+                        <p><em>"Excelente técnica y Muy veloz. Muy Preciso." - Clientes satisfechos 25</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-white text-center py-4"
+        style="background: linear-gradient(90deg, #030637, #3C0753, #720455, #910A67);">
+        <div class="container">
+            <p class="mb-1">© 2025 Milonga la Improvisada</p>
+            <small>Hecho con mucha dedicacion y amor para Coderhouse y la improvisada. Desde Paraná, Entre Ríos</small>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
